@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel & Berita Wisata - Jogja Buddy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 px-6 bg-white shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">Teman<span class="text-yellow-600">Jalan</span></a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="index.html">Beranda</a>
+                <a href="layanan.html">Layanan</a>
+                <a href="faq.html">FAQ</a>
+                <a href="Gambar.html">Gambar</a>
+                <a href="artikel.html" class="nav-link-active">Artikel</a>
+            </div>
+            <a href="https://wa.me/62895333353386" class="bg-primary text-white px-5 py-2 rounded-full text-sm">Tanya Jadwal</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Wawasan & Kabar Jogja</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Temukan info event terbaru dan destinasi tersembunyi untuk rencana perjalanan Anda.</p>
+            
+            <div class="flex justify-center gap-4 mt-10">
+                <button onclick="filterArtikel('semua')" class="filter-btn active-btn px-6 py-2 rounded-full border border-primary font-semibold transition">Semua</button>
+                <button onclick="filterArtikel('event')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-primary transition font-semibold">Event Jogja</button>
+                <button onclick="filterArtikel('wisata')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-primary transition font-semibold">Info Wisata</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div id="article-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="article-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition" data-category="event">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800" alt="Event" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Event</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gray-400 text-sm">20 Desember 2025</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">SWARA PRAMBANAN 2025 (31 Desember 2025)</h3>
+                        <p class="text-gray-600 text-sm mb-4">✨ SWARA PRAMBANAN 2025 ✨
+                            Festival Menikmati Akhir Senja – 31 Desember 2025
+                            Taman Wisata Candi Prambanan</p>
+                        <a href="https://visitingjogja.jogjaprov.go.id/44007/swara-prambanan-2025-31-desember-2025/" class="text-primary font-bold hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition" data-category="wisata">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1543874768-af0b9c4090d5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wisata" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Wisata</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gray-400 text-sm">20 Desember 2025</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">5 Spot Sunset Terbaik di Gunungkidul</h3>
+                        <p class="text-gray-600 text-sm mb-4">Jangan cuma ke Parangtritis, intip pantai-pantai tersembunyi dengan pemandangan sunset memukau...</p>
+                        <a href="#" class="text-primary font-bold hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <article class="article-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition" data-category="event">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1610010850404-c892d328cf86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Event</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-gray-400 text-sm">20 Desember 2025</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Wayang Jogja Night Carnival (WJNC)</h3>
+                        <p class="text-gray-600 text-sm mb-4">Puncak perayaan HUT Kota Jogja dengan parade kostum cahaya di sekitar Tugu Pal Putih...</p>
+                        <a href="#" class="text-primary font-bold hover:underline">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 text-center mt-20">
+        <p>&copy; 2024 Jogja Buddy. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/62895333353386" class="wa-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
