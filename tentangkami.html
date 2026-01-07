@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Jalan | Jogja Story</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-bg: #1a1a1a;
+            --soft-white: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--soft-white);
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 30px 10%;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            mix-blend-mode: difference; 
+            color: white;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--dark-bg);
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(to right, var(--dark-bg), transparent),
+                        url(/galeri/gunung.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-left: 10%;
+            max-width: 600px;
+            color: white;
+        }
+
+        .sub-title {
+            color: var(--primary-gold);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ccc;
+            font-weight: 300;
+            border-left: 2px solid var(--primary-gold);
+            padding-left: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+        }
+
+        .btn-gold {
+            background-color: var(--primary-gold);
+            color: white;
+        }
+
+        .btn-gold:hover {
+            background-color: transparent;
+            border: 1px solid var(--primary-gold);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .wa-contact {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .wa-contact:hover {
+            transform: translateY(-5px);
+        }
+
+        .wa-icon {
+            background: #25d366;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image { width: 100%; opacity: 0.4; }
+            .hero-content h1 { font-size: 3rem; }
+            header { padding: 20px 5%; }
+            .nav-links { display: none; }
+            .hero-content { padding-right: 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TEMAN JALAN</div>
+        <ul class="nav-links">
+            <a href="layanan.html">Layanan</a>
+            <a href="faq.html">FAQ</a>
+            <a href="artikel.html">Artikel</a>
+            <a href="Gambar.html">Galery</a>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <span class="sub-title">Teman Jalan</span>
+            <h1>Seni <br> Perjalanan <br> Tanpa Batas.</h1>
+            <p class="description">
+                Teman Jalan bukan sekadar wisata.
+                Dari sudut tersembunyi di gang-gang Malioboro hingga magisnya fajar di candi, 
+                kami menemani Anda merasakan detak jantung Jogja yang sesungguhnya.
+                Lupakan peta, nikmati cerita.
+            </p>
+            <div class="btn-container">
+                <a href="index.html" class="btn btn-gold">Eksplorasi</a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/62895333353386" class="wa-contact">
+        <span style="font-size: 0.8rem; font-weight: 600;">Tanya Bestie</span>
+        <div class="wa-icon">
+            <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.747-2.874-2.512-2.96-2.626-.087-.115-.708-.943-.708-1.799 0-.856.448-1.277.607-1.448.159-.171.347-.214.462-.214.116 0 .231.004.332.009.109.004.254-.042.398.304.144.346.491 1.197.535 1.283.044.085.073.184.015.303-.059.117-.088.192-.174.294-.086.102-.181.227-.258.303-.087.085-.177.175-.077.346.099.171.442.73 0.95 1.182.654.582 1.207.763 1.38.849.173.085.275.072.376-.045.101-.117.433-.505.548-.678.115-.172.231-.143.389-.086.158.058 1.011.477 1.184.563.174.086.289.129.332.202.043.073.043.423-.101.827z"/></svg>
+        </div>
+    </a>
+
+</body>
+</html>
